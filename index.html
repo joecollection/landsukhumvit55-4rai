@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Land 4 Rai – CBD Sukhumvit 55 · Investment Analysis</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -32,6 +32,8 @@
     font-weight: 300;
     line-height: 1.7;
     overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 
   @keyframes fadeUp {
@@ -165,17 +167,42 @@
 
   /* ─── TABLE ─── */
   .table-responsive-wrapper {
+    width: 100%;
+    display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 16px;
     border: 1px solid var(--border);
     border-radius: 4px;
+    box-shadow: inset -15px 0 15px -15px rgba(201, 168, 76, 0.15); /* Subtle visual hint for scroll */
   }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 600px; }
+  
+  /* Custom Scrollbar for better UI on Desktop & some mobile views */
+  .table-responsive-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+  .table-responsive-wrapper::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2);
+  }
+  .table-responsive-wrapper::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+    border-radius: 4px;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 650px; }
   thead tr { border-bottom: 1px solid var(--gold); background: rgba(0,0,0,0.2); }
-  th { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); padding: 12px 14px; text-align: left; font-weight: 600; }
-  td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; }
-  p.table-hint { display: none; font-size: 11px; color: var(--text-muted); margin-bottom: 8px; font-style: italic; }
+  th { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); padding: 16px 14px; text-align: left; font-weight: 600; white-space: nowrap; }
+  
+  /* Vertically align text for visually appealing view */
+  td { 
+    padding: 16px 14px; 
+    border-bottom: 1px solid var(--border); 
+    color: var(--text-secondary); 
+    vertical-align: middle; 
+    line-height: 1.6;
+  }
+  
+  p.table-hint { display: none; font-size: 11px; color: var(--gold-light); margin-bottom: 12px; font-style: italic; font-weight: 500; letter-spacing: 0.05em; }
   tr:last-child td { border-bottom: none; }
   td.highlight { color: var(--text-primary); font-weight: 500; }
   td.gold  { color: var(--gold-light); font-weight: 600; }
@@ -269,7 +296,9 @@
 
   @media (max-width: 768px) {
     header { padding: 32px 20px 32px; }
-    main { padding: 32px 20px 60px; }
+    header::after { left: 20px; right: 20px; }
+    main { padding: 32px 20px 60px; overflow: hidden; width: 100%; }
+    
     .header-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
     .price-hero { width: 100%; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
     .price-per { margin-left: 0; border-left: none; padding-left: 0; margin-top: 4px; }
@@ -278,9 +307,11 @@
     .scenario-head { flex-direction: column; align-items: flex-start; }
     .scenario-badge { margin-top: 4px; }
     
-    .card { padding: 20px; }
-    .scenario { padding: 20px; }
-    p.table-hint { display: block; } /* แสดงข้อความบอกว่าเลื่อนขวาได้ */
+    .card { padding: 20px; width: 100%; }
+    .scenario { padding: 20px; width: 100%; }
+    
+    p.table-hint { display: flex; align-items: center; gap: 8px; } 
+    p.table-hint::before { content: '↔'; font-style: normal; font-size: 14px; }
   }
 
   @media (max-width: 480px) {
@@ -409,7 +440,7 @@
       <h2 class="section-title">GFA Optimization & Development Envelope</h2>
       <div class="section-line"></div>
     </div>
-    <p class="table-hint">Swipe left/right to view full table ⟷</p>
+    <p class="table-hint">Swipe to view full data</p>
     <div class="table-responsive-wrapper">
       <table>
         <thead>
@@ -451,7 +482,7 @@
       <div class="divider"></div>
       <div class="grid-2">
         <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
+          <p class="table-hint">Swipe to view full data</p>
           <div class="table-responsive-wrapper">
             <table>
               <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
@@ -498,7 +529,7 @@
       <div class="divider"></div>
       <div class="grid-2">
         <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
+          <p class="table-hint">Swipe to view full data</p>
           <div class="table-responsive-wrapper">
             <table>
               <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
@@ -545,7 +576,7 @@
       <div class="divider"></div>
       <div class="grid-2">
         <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
+          <p class="table-hint">Swipe to view full data</p>
           <div class="table-responsive-wrapper">
             <table>
               <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
@@ -585,7 +616,7 @@
       <div class="section-line"></div>
     </div>
     <div class="card">
-      <p class="table-hint">Swipe left/right to view full table ⟷</p>
+      <p class="table-hint">Swipe to view full data</p>
       <div class="table-responsive-wrapper">
         <table>
           <thead>
@@ -742,7 +773,6 @@
 </footer>
 
 <script>
-  // โค้ดเสริมสำหรับซ่อน/แสดงเบรกแถวที่ฟุตเตอร์ในมือถือเพื่อความสวยงาม
   if(window.innerWidth <= 768) {
     var mobBreak = document.querySelector('.mobile-break');
     if(mobBreak) mobBreak.style.display = 'block';
