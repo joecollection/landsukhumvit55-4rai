@@ -3,751 +3,775 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Land 4 Rai – CBD Sukhumvit 55 · Investment Analysis</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Land 4 Rai · Sukhumvit 55 (Thonglor) · JOE COLLECTION</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8CB7A;
-    --gold-dark: #8B6914;
-    --obsidian: #0A0A0A;
-    --charcoal: #141414;
-    --slate: #1E1E1E;
-    --mid: #2A2A2A;
-    --border: #2E2E2E;
-    --text-primary: #F0EDE6;
-    --text-secondary: #A89E8C;
-    --text-muted: #6B6355;
-    --green: #4CAF72;
-    --red: #E05C5C;
-    --blue: #5C8FE0;
-  }
+:root{
+  --navy-deep:#0a1628;
+  --navy-mid:#111f38;
+  --navy-card:#152540;
+  --gold:#c9a84c;
+  --gold-light:#e6cd85;
+  --platinum:#d4d8e0;
+  --electric:#1a6fd4;
+  --concrete:#2a3040;
+  --green:#3fae72;
+  --green-light:#5ed392;
+  --teal:#2dd4bf;
+  --slate:#8a94a6;
+  --ivory:#f4f1ea;
+  --red-flag:#c0432f;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; width:100%; max-width:100vw; overflow-x:hidden;}
+body{
+  background:var(--navy-deep);
+  color:var(--ivory);
+  font-family:'Inter',sans-serif;
+  width:100%;
+  max-width:100vw;
+  overflow-x:hidden;
+  line-height:1.55;
+}
+h1,h2,h3,.serif-display{font-family:'Cormorant Garamond',serif;}
+.data-serif{font-family:'Libre Baskerville',serif;}
+a{color:inherit;}
+img{max-width:100%; display:block;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ===== NAV ===== */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:9999;
+  background:rgba(10,22,40,0.97); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,168,76,0.25);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 18px;
+}
+.nav-left{
+  font-family:'Cormorant Garamond',serif; font-weight:700; font-size:19px;
+  letter-spacing:2px; color:var(--gold);
+  flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.nav-right{font-size:10.5px; color:var(--slate); text-align:right; line-height:1.5; flex:0 0 auto; padding-left:10px;}
+.nav-right b{color:var(--platinum);}
 
-  body {
-    background: var(--obsidian);
-    color: var(--text-primary);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+/* ===== LAYOUT ===== */
+.wrap{width:100%; max-width:1040px; margin:0 auto; padding:0 clamp(16px,4.4vw,18px); box-sizing:border-box;}
+section{padding:56px 0 8px;}
+.section-label{
+  font-size:11px; letter-spacing:3px; color:var(--gold); font-weight:700;
+  text-transform:uppercase; margin-bottom:8px;
+}
+.section-title{font-size:clamp(24px,5vw,34px); font-weight:600; color:var(--ivory); margin-bottom:22px; line-height:1.15;}
+.hairline{height:1px; background:linear-gradient(90deg, rgba(201,168,76,0.5), transparent); margin:8px 0 30px;}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(32px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes shimmer {
-    0%   { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-  @keyframes pulse-border {
-    0%, 100% { border-color: rgba(76,175,114,0.35); box-shadow: 0 0 0 0 rgba(76,175,114,0); }
-    50%       { border-color: rgba(76,175,114,0.7);  box-shadow: 0 0 20px 4px rgba(76,175,114,0.15); }
-  }
+/* ===== HERO ===== */
+/* Self-contained gradient hero — no external image dependency, so nothing can 404
+   and nothing can pull content up under the fixed nav (previous version used a
+   negative margin timed to an image's height, which broke when the image failed). */
+.hero{
+  position:relative;
+  padding:118px 0 44px;
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(26,111,212,0.20), transparent 60%),
+    radial-gradient(ellipse 700px 420px at 100% 0%, rgba(201,168,76,0.14), transparent 55%),
+    var(--navy-deep);
+  border-bottom:1px solid rgba(201,168,76,0.25);
+  overflow:hidden;
+}
+.hero-skyline{
+  position:absolute; left:0; right:0; bottom:0; height:120px; opacity:0.5;
+  background-image:
+    linear-gradient(90deg, var(--navy-mid) 0 6%, transparent 6%),
+    linear-gradient(90deg, transparent 9%, var(--navy-mid) 9% 13%, transparent 13%),
+    linear-gradient(90deg, transparent 17%, var(--navy-mid) 17% 24%, transparent 24%),
+    linear-gradient(90deg, transparent 29%, var(--navy-mid) 29% 34%, transparent 34%),
+    linear-gradient(90deg, transparent 40%, var(--navy-mid) 40% 49%, transparent 49%),
+    linear-gradient(90deg, transparent 54%, var(--navy-mid) 54% 60%, transparent 60%),
+    linear-gradient(90deg, transparent 66%, var(--navy-mid) 66% 74%, transparent 74%),
+    linear-gradient(90deg, transparent 80%, var(--navy-mid) 80% 87%, transparent 87%),
+    linear-gradient(90deg, transparent 92%, var(--navy-mid) 92% 97%, transparent 97%);
+  background-repeat:no-repeat; background-size:100% 100%;
+  clip-path:polygon(0 100%,0 55%,4% 55%,4% 30%,9% 30%,9% 62%,14% 62%,14% 20%,20% 20%,20% 70%,26% 70%,26% 40%,32% 40%,32% 66%,38% 66%,38% 12%,45% 12%,45% 58%,52% 58%,52% 34%,58% 34%,58% 72%,64% 72%,64% 26%,71% 26%,71% 50%,77% 50%,77% 16%,84% 16%,84% 62%,90% 62%,90% 44%,97% 44%,97% 74%,100% 74%,100% 100%);
+  pointer-events:none;
+}
+.hero-overlay{position:relative; z-index:1;}
+.hero-eyebrow{color:var(--electric); font-size:12px; letter-spacing:3px; font-weight:700; text-transform:uppercase; margin-bottom:10px;}
+.hero-title{font-size:clamp(30px,7vw,52px); font-weight:600; line-height:1.05; color:var(--ivory); max-width:820px;}
+.hero-title em{font-style:italic; color:var(--gold-light);}
+.hero-sub{color:var(--platinum); font-size:15px; margin-top:14px; max-width:640px;}
 
-  .fade-up { animation: fadeUp 0.8s ease forwards; }
-  .delay-1 { animation-delay: 0.1s; opacity: 0; }
-  .delay-2 { animation-delay: 0.2s; opacity: 0; }
-  .delay-3 { animation-delay: 0.35s; opacity: 0; }
-  .delay-4 { animation-delay: 0.5s;  opacity: 0; }
-  .delay-5 { animation-delay: 0.65s; opacity: 0; }
+/* ===== KPI RIBBON ===== */
+.kpi-ribbon{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:rgba(201,168,76,0.18); border:1px solid rgba(201,168,76,0.18);
+  border-radius:4px; overflow:hidden;
+}
+.kpi-cell{background:var(--navy-mid); padding:18px 14px; min-width:0;}
+.kpi-label{font-size:9.5px; letter-spacing:1.5px; color:var(--slate); text-transform:uppercase; margin-bottom:6px;}
+.kpi-value{font-family:'Libre Baskerville',serif; font-size:clamp(14px,3.6vw,19px); color:var(--gold-light); font-weight:700; line-height:1.3; word-break:break-word;}
+@media (min-width:700px){ .kpi-ribbon{grid-template-columns:repeat(4,1fr);} }
 
-  /* ─── HEADER ─── */
-  header {
-    position: relative;
-    background: linear-gradient(160deg, #0F0F0F 0%, #1A1510 50%, #0A0A08 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 40px 40px;
-    overflow: hidden;
-  }
-  header::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  header::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 40px; right: 40px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
+/* ===== TWO COL ===== */
+.two-col{display:flex; flex-direction:column; gap:28px;}
+@media (min-width:700px){ .two-col{flex-direction:row;} .two-col > div{flex:1; min-width:0;} }
 
-  .header-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 24px;
-  }
-  .logo-block { display: flex; flex-direction: column; gap: 4px; }
-  .logo-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 600; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--gold);
-  }
-  .logo-sub { font-size: 9px; letter-spacing: 0.22em; color: var(--text-muted); text-transform: uppercase; }
+/* ===== FACT CHIPS ===== */
+.chip-grid{display:grid; grid-template-columns:1fr; gap:10px;}
+@media (min-width:480px){ .chip-grid{grid-template-columns:1fr 1fr;} }
+.chip{background:var(--navy-mid); border:1px solid rgba(201,168,76,0.15); border-radius:4px; padding:12px 14px; min-width:0;}
+.chip-k{font-size:9.5px; letter-spacing:1.2px; color:var(--slate); text-transform:uppercase; margin-bottom:4px;}
+.chip-v{font-size:13.5px; color:var(--ivory); font-weight:600;}
 
-  .header-badge {
-    background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
-    border: 1px solid rgba(201,168,76,0.3); border-radius: 3px;
-    padding: 8px 16px; font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--gold-light);
-  }
+/* ===== CALLOUTS ===== */
+.callout{border-radius:4px; padding:18px 20px; margin:18px 0; border-left:3px solid;}
+.callout-gold{background:rgba(201,168,76,0.08); border-color:var(--gold);}
+.callout-teal{background:rgba(45,212,191,0.07); border-color:var(--teal);}
+.callout-green{background:rgba(63,174,114,0.09); border-color:var(--green);}
+.callout-title{font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; font-weight:700; margin-bottom:8px; color:var(--gold-light);}
+.callout-teal .callout-title{color:var(--teal);}
+.callout-green .callout-title{color:var(--green-light);}
+.callout-body{font-size:13.5px; color:var(--platinum); line-height:1.75;}
+.callout-body i{color:var(--ivory); font-style:italic;}
 
-  .hero-section { max-width: 1100px; margin: 0 auto; padding-top: 36px; }
-  .hero-label { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-  .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 5vw, 58px); font-weight: 300; line-height: 1.2;
-    color: var(--text-primary); margin-bottom: 10px;
-    word-break: break-word;
-  }
-  .hero-title em {
-    font-style: italic;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-    background-size: 200% auto;
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    animation: shimmer 4s linear infinite;
-  }
-  .hero-sub { font-size: 12px; letter-spacing: 0.15em; color: var(--text-secondary); margin-bottom: 28px; }
+/* ===== STAT ROWS ===== */
+.stat-row{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 10px;
+  padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.stat-row .k{font-size:12.5px; color:var(--slate); flex-shrink:0;}
+.stat-row .v{font-size:13px; color:var(--ivory); font-weight:600; text-align:right; word-break:break-word;}
 
-  .price-hero {
-    display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
-    background: linear-gradient(135deg, rgba(76,175,114,0.12), rgba(76,175,114,0.04));
-    border: 1px solid rgba(76,175,114,0.35); border-radius: 4px;
-    padding: 14px 24px; animation: pulse-border 3s ease infinite;
-  }
-  .price-main {
-    font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 40px); font-weight: 600;
-    color: #7EE0A0; letter-spacing: -0.01em;
-  }
-  .price-unit { font-size: 11px; color: var(--text-secondary); letter-spacing: 0.15em; }
-  .price-per {
-    font-size: 13px; color: var(--text-secondary);
-    margin-left: 16px; border-left: 1px solid var(--border); padding-left: 16px;
-  }
-  .price-per strong { color: var(--gold-light); font-weight: 600; }
+/* ===== MAP CARD ===== */
+.map-card{margin-top:16px; background:var(--navy-mid); border:1px solid rgba(201,168,76,0.15); border-radius:4px; padding:14px 16px; font-size:12.5px; color:var(--slate);}
+.map-card a{color:var(--electric); font-weight:600;}
 
-  /* ─── LAYOUT ─── */
-  main { max-width: 1100px; margin: 0 auto; padding: 52px 40px 80px; }
+/* ===== SCENARIO CARDS ===== */
+.scenario-grid{display:grid; grid-template-columns:1fr; gap:16px;}
+@media (min-width:700px){ .scenario-grid{grid-template-columns:1fr 1fr;} }
+.scenario-card{
+  background:var(--navy-mid); border:1px solid rgba(201,168,76,0.15); border-radius:6px; padding:20px;
+  position:relative; min-width:0;
+}
+.scenario-card.best{border:1px solid var(--gold); box-shadow:0 0 0 1px rgba(201,168,76,0.25), 0 8px 30px rgba(201,168,76,0.08);}
+.badge-best{
+  position:absolute; top:-11px; right:16px; background:var(--gold); color:var(--navy-deep);
+  font-size:9.5px; font-weight:800; letter-spacing:1px; padding:4px 10px; border-radius:20px; text-transform:uppercase;
+}
+.scenario-num{font-size:10.5px; color:var(--slate); letter-spacing:1.5px; margin-bottom:4px;}
+.scenario-name{font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--ivory); margin-bottom:8px;}
+.scenario-desc{font-size:12.8px; color:var(--platinum); margin-bottom:14px; line-height:1.6;}
+.scenario-metrics{display:grid; grid-template-columns:1fr 1fr; gap:8px 14px;}
+.metric{border-top:1px solid rgba(255,255,255,0.07); padding-top:6px;}
+.metric-k{font-size:9px; letter-spacing:1px; color:var(--slate); text-transform:uppercase;}
+.metric-v{font-size:14px; color:var(--gold-light); font-weight:700; font-family:'Libre Baskerville',serif;}
+.risk-tag{display:inline-block; font-size:9.5px; letter-spacing:1px; padding:3px 9px; border-radius:12px; margin-top:12px; text-transform:uppercase; font-weight:700;}
+.risk-low{background:rgba(63,174,114,0.15); color:var(--green-light);}
+.risk-med{background:rgba(201,168,76,0.15); color:var(--gold-light);}
+.risk-high{background:rgba(192,67,47,0.15); color:#e28a7a;}
 
-  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-  .section-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--gold); letter-spacing: 0.2em; min-width: 28px; }
-  .section-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--text-primary); letter-spacing: 0.02em; }
-  .section-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.4; }
-  section { margin-bottom: 56px; }
+/* ===== TABLES ===== */
+.table-wrap{overflow-x:auto; border:1px solid rgba(201,168,76,0.15); border-radius:6px; -webkit-overflow-scrolling:touch;}
+.swipe-hint{font-size:10.5px; color:var(--slate); margin-bottom:8px; display:flex; align-items:center; gap:6px;}
+table{border-collapse:collapse; width:100%; min-width:640px; font-size:12.5px;}
+thead th{
+  background:linear-gradient(180deg, rgba(201,168,76,0.18), rgba(201,168,76,0.08));
+  color:var(--gold-light); text-align:left; padding:11px 14px; font-weight:700;
+  font-size:10.5px; letter-spacing:0.6px; text-transform:uppercase; white-space:nowrap;
+  border-bottom:1px solid rgba(201,168,76,0.3);
+}
+tbody td{padding:10px 14px; border-bottom:1px solid rgba(255,255,255,0.05); color:var(--platinum); white-space:nowrap;}
+tbody tr:hover{background:rgba(201,168,76,0.05);}
+tbody tr:last-child td{border-bottom:none;}
+tfoot td{padding:12px 14px; font-weight:700; color:var(--gold-light); background:rgba(201,168,76,0.06); font-size:12px;}
+.tier-subject td:first-child{color:var(--gold-light); font-weight:700;}
+.tag{font-size:9px; padding:2px 7px; border-radius:10px; text-transform:uppercase; letter-spacing:0.5px; font-weight:700;}
+.tag-subject{background:rgba(201,168,76,0.2); color:var(--gold-light);}
+.tag-comp{background:rgba(45,212,191,0.15); color:var(--teal);}
+.tag-dev{background:rgba(63,174,114,0.15); color:var(--green-light);}
+.table-footnote{font-size:11px; color:var(--slate); padding:12px 4px; font-style:italic;}
 
-  /* ─── CARDS ─── */
-  .card {
-    background: var(--charcoal); border: 1px solid var(--border);
-    border-radius: 4px; padding: 28px; position: relative; overflow: hidden;
-  }
-  .card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.5;
-  }
+/* ===== WATERFALL / BARS ===== */
+.wf-row{display:flex; align-items:center; gap:8px; margin-bottom:9px;}
+.wf-label{width:128px; flex-shrink:0; font-size:11px; color:var(--slate); line-height:1.25;}
+.wf-bar-track{flex:1; background:rgba(255,255,255,0.05); border-radius:3px; overflow:hidden; height:20px; min-width:40px;}
+.wf-bar{height:100%; border-radius:3px;}
+.wf-val{width:82px; flex-shrink:0; text-align:right; font-size:12px; font-family:'Libre Baskerville',serif; color:var(--ivory); white-space:nowrap; overflow:hidden;}
+@media (max-width:400px){
+  .wf-label{width:104px; font-size:10px;}
+  .wf-val{width:70px; font-size:10.5px;}
+}
+.wf-gdv{background:linear-gradient(90deg,var(--electric),#4a94e8);}
+.wf-cost{background:var(--concrete);}
+.wf-green{background:linear-gradient(90deg,var(--green),var(--green-light));}
+.wf-gold{background:linear-gradient(90deg,var(--gold),var(--gold-light));}
 
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+/* ===== LOCATION CARDS ===== */
+.loc-grid{display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:28px;}
+@media (min-width:480px){ .loc-grid{grid-template-columns:1fr 1fr;} }
+.loc-card{background:var(--navy-mid); border:1px solid rgba(201,168,76,0.15); border-radius:6px; padding:16px; min-width:0;}
+.loc-icon{font-size:20px; margin-bottom:8px;}
+.loc-title{font-size:13.5px; font-weight:700; color:var(--gold-light); margin-bottom:6px;}
+.loc-body{font-size:12px; color:var(--platinum); line-height:1.6;}
 
-  /* ─── STAT TILES ─── */
-  .stat-tile { background: var(--slate); border: 1px solid var(--border); border-radius: 4px; padding: 20px; }
-  .stat-label { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-  .stat-value { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; line-height: 1; color: var(--text-primary); }
-  .stat-unit { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
-  .stat-tile.accent-gold { border-color: rgba(201,168,76,0.4); background: linear-gradient(135deg, rgba(201,168,76,0.06), var(--slate)); }
-  .stat-tile.accent-green { border-color: rgba(76,175,114,0.4); background: linear-gradient(135deg, rgba(76,175,114,0.06), var(--slate)); }
-  .stat-tile.accent-blue  { border-color: rgba(92,143,224,0.4); background: linear-gradient(135deg, rgba(92,143,224,0.06), var(--slate)); }
-  .stat-tile.accent-gold .stat-value  { color: var(--gold-light); }
-  .stat-tile.accent-green .stat-value { color: #7EE0A0; }
-  .stat-tile.accent-blue  .stat-value { color: #7EB0E0; }
+/* ===== SCORE BARS ===== */
+.score-row{margin-bottom:14px;}
+.score-top{display:flex; justify-content:space-between; font-size:12px; margin-bottom:5px;}
+.score-top .k{color:var(--platinum);}
+.score-top .v{color:var(--gold-light); font-weight:700;}
+.score-track{height:6px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden;}
+.score-fill{height:100%; background:linear-gradient(90deg,var(--electric),var(--teal)); border-radius:3px;}
 
-  /* ─── TABLE ─── */
-  .table-responsive-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-  }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 600px; }
-  thead tr { border-bottom: 1px solid var(--gold); background: rgba(0,0,0,0.2); }
-  th { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); padding: 12px 14px; text-align: left; font-weight: 600; }
-  td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; }
-  p.table-hint { display: none; font-size: 11px; color: var(--text-muted); margin-bottom: 8px; font-style: italic; }
-  tr:last-child td { border-bottom: none; }
-  td.highlight { color: var(--text-primary); font-weight: 500; }
-  td.gold  { color: var(--gold-light); font-weight: 600; }
-  td.green { color: #7EE0A0; font-weight: 600; }
-  td.red-text { color: #E08080; }
-  tr:hover td { background: rgba(255,255,255,0.02); }
+/* ===== ROADMAP (always full width) ===== */
+.roadmap{display:flex; flex-direction:column; gap:0; margin-bottom:30px;}
+.phase{display:flex; gap:16px; padding:20px 0; border-left:2px solid rgba(201,168,76,0.25); position:relative; padding-left:26px; margin-left:8px;}
+.phase:last-child{border-left:2px solid transparent;}
+.phase-dot{position:absolute; left:-8px; top:22px; width:14px; height:14px; border-radius:50%; background:var(--navy-deep); border:2px solid var(--gold);}
+.phase-dot.final{background:var(--gold); box-shadow:0 0 14px 4px rgba(201,168,76,0.55); animation:pulse 2.4s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 8px 2px rgba(201,168,76,0.4);} 50%{box-shadow:0 0 18px 7px rgba(201,168,76,0.65);} 100%{box-shadow:0 0 8px 2px rgba(201,168,76,0.4);}}
+.phase-num{font-size:10px; color:var(--slate); letter-spacing:1.5px; margin-bottom:3px;}
+.phase-title{font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:var(--ivory); margin-bottom:4px;}
+.phase-time{font-size:11px; color:var(--gold-light); margin-bottom:6px;}
+.phase-desc{font-size:12.5px; color:var(--platinum); line-height:1.6;}
 
-  /* ─── SCENARIOS ─── */
-  .scenario { background: var(--slate); border: 1px solid var(--border); border-radius: 4px; padding: 24px; }
-  .scenario-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; gap: 16px; }
-  .scenario-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text-primary); }
-  .scenario-badge { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; white-space: nowrap; }
-  .badge-recommended { background: rgba(76,175,114,0.15); color: #7EE0A0; border: 1px solid rgba(76,175,114,0.3); }
-  .badge-premium     { background: rgba(201,168,76,0.12); color: var(--gold-light); border: 1px solid rgba(201,168,76,0.3); }
-  .badge-alt         { background: rgba(92,143,224,0.12); color: #7EB0E0; border: 1px solid rgba(92,143,224,0.3); }
+/* ===== RISK TABLE ===== */
+.sev-high{color:#e28a7a; font-weight:700;}
+.sev-med{color:var(--gold-light); font-weight:700;}
+.sev-low{color:var(--green-light); font-weight:700;}
 
-  .scenario-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 16px; }
-  .metric-mini { text-align: center; background: rgba(0,0,0,0.15); padding: 10px; border-radius: 4px; }
-  .metric-mini .val { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; }
-  .metric-mini .lbl { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
-  .val.g  { color: #7EE0A0; }
-  .val.gl { color: var(--gold-light); }
-  .val.b  { color: #7EB0E0; }
+/* ===== DEAL BOX ===== */
+.deal-box{
+  text-align:center; border-radius:10px; padding:40px 22px; margin:20px 0 40px;
+  background:radial-gradient(ellipse at top, rgba(201,168,76,0.1), var(--navy-mid) 70%);
+  border-top:2px solid transparent;
+  border-image:linear-gradient(90deg, transparent, var(--gold), transparent) 1;
+  position:relative;
+}
+.deal-headline{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(19px,4.2vw,25px); color:var(--gold-light); max-width:720px; margin:0 auto 22px; line-height:1.4;}
+.ask-price{font-family:'Libre Baskerville',serif; font-size:clamp(30px,8vw,46px); color:var(--green-light); font-weight:700; letter-spacing:0.5px;}
+.ask-sub{font-size:12px; color:var(--slate); margin-top:8px; letter-spacing:0.3px;}
+.deal-div{height:1px; background:rgba(201,168,76,0.25); max-width:400px; margin:26px auto;}
+.thesis p{font-size:13.5px; color:var(--platinum); text-align:left; max-width:760px; margin:0 auto 14px; line-height:1.75;}
+.thesis b{color:var(--ivory);}
+.pill-row{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:26px;}
+.pill{background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.3); color:var(--gold-light); font-size:11px; padding:6px 13px; border-radius:20px; font-weight:600;}
 
-  /* ─── MISC ─── */
-  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 8px 0 16px; }
+/* ===== CONTACT ===== */
+.contact-strip{background:var(--navy-mid); padding:40px 0; margin-top:20px; border-top:1px solid rgba(201,168,76,0.2);}
+.contact-grid{display:flex; flex-direction:column; gap:24px; text-align:center;}
+@media (min-width:640px){ .contact-grid{flex-direction:row; text-align:left; min-width:640px;} .contact-grid > div{flex:1;} }
+.contact-name{font-size:16px; font-weight:700; color:var(--ivory);}
+.contact-role{font-size:11.5px; color:var(--slate); margin-top:2px;}
+.contact-line{font-size:13px; color:var(--platinum); margin:5px 0;}
+.cta-btn{
+  display:inline-block; margin-top:10px; margin-right:8px; padding:9px 16px; border:1px solid var(--gold);
+  color:var(--gold-light); font-size:11.5px; border-radius:4px; text-decoration:none; font-weight:600;
+}
+.wordmark{font-family:'Cormorant Garamond',serif; font-size:22px; color:var(--gold); letter-spacing:2px; text-align:center;}
+@media (min-width:640px){ .wordmark{text-align:right;} }
 
-  p { color: var(--text-secondary); font-size: 13px; line-height: 1.9; margin-bottom: 12px; }
-  p:last-child { margin-bottom: 0; }
+/* ===== DISCLAIMER ===== */
+.disclaimer{font-size:9.5px; color:var(--slate); text-align:center; padding:26px 18px 50px; max-width:760px; margin:0 auto; line-height:1.8;}
 
-  .highlight-box {
-    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
-    border: 1px solid rgba(201,168,76,0.25); border-left: 3px solid var(--gold);
-    border-radius: 2px; padding: 16px 20px; margin: 16px 0;
-  }
-  .highlight-box p { color: var(--text-primary); font-size: 13px; }
+/* ===== GOLD ASKING BUTTON ===== */
+.asking-btn{
+  display:block; text-align:center; background:linear-gradient(135deg,#2f9e5f,#3fae72);
+  color:#fff; font-family:'Libre Baskerville',serif; font-size:15px; font-weight:700;
+  padding:14px; border-radius:6px; margin-top:16px; letter-spacing:0.3px;
+}
 
-  .bullet-list { list-style: none; padding: 0; }
-  .bullet-list li {
-    display: flex; align-items: flex-start; gap: 12px;
-    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
-    font-size: 13px; color: var(--text-secondary);
-  }
-  .bullet-list li:last-child { border-bottom: none; }
-  .bullet-list li::before { content: '◆'; color: var(--gold); font-size: 8px; margin-top: 6px; flex-shrink: 0; }
-
-  /* ─── RISK MATRIX ─── */
-  .risk-item {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 12px;
-  }
-  .risk-item:last-child { border-bottom: none; }
-  .risk-name { color: var(--text-primary); flex: 1; }
-  .risk-bar-wrap { width: 120px; height: 4px; background: var(--mid); border-radius: 2px; margin: 0 12px; }
-  .risk-bar { height: 100%; border-radius: 2px; }
-  .risk-low  { background: #4CAF72; width: 30%; }
-  .risk-mid  { background: #C9A84C; width: 55%; }
-  .risk-high { background: #E05C5C; width: 80%; }
-  .risk-tag { font-size: 9px; letter-spacing: 0.1em; padding: 2px 8px; border-radius: 2px; white-space: nowrap; }
-  .tag-low  { background: rgba(76,175,114,0.15); color: #7EE0A0; }
-  .tag-mid  { background: rgba(201,168,76,0.15); color: var(--gold-light); }
-  .tag-high { background: rgba(224,92,92,0.15);  color: #E08080; }
-
-  /* ─── CONTACT ─── */
-  .contact-card {
-    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
-    border: 1px solid rgba(201,168,76,0.3); border-radius: 4px;
-    padding: 40px; text-align: center; position: relative; overflow: hidden;
-  }
-  .contact-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
-  .contact-name { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-  .contact-title { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px; }
-  .contact-info { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; }
-  .contact-item { font-size: 13px; color: var(--text-secondary); }
-  .contact-item strong { color: var(--gold-light); display: block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
-
-  footer {
-    background: var(--charcoal); border-top: 1px solid var(--border);
-    padding: 20px 40px; text-align: center;
-    font-size: 10px; letter-spacing: 0.15em; color: var(--text-muted); text-transform: uppercase;
-    line-height: 1.8;
-  }
-
-  /* ─── RESPONSIVE STYLES ─── */
-  @media (max-width: 992px) {
-    .grid-4 { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 768px) {
-    header { padding: 32px 20px 32px; }
-    main { padding: 32px 20px 60px; }
-    .header-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .price-hero { width: 100%; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-    .price-per { margin-left: 0; border-left: none; padding-left: 0; margin-top: 4px; }
-    
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
-    .scenario-head { flex-direction: column; align-items: flex-start; }
-    .scenario-badge { margin-top: 4px; }
-    
-    .card { padding: 20px; }
-    .scenario { padding: 20px; }
-    p.table-hint { display: block; } /* แสดงข้อความบอกว่าเลื่อนขวาได้ */
-  }
-
-  @media (max-width: 480px) {
-    .scenario-metrics { grid-template-columns: 1fr; }
-    .contact-info { flex-direction: column; gap: 16px; text-align: center; }
-    .contact-card { padding: 30px 16px; }
-    .section-title { font-size: 22px; }
-  }
+.eyebrow-small{font-size:11px; color:var(--electric); letter-spacing:2px; font-weight:700; text-transform:uppercase;}
+ul.plain{list-style:none;}
+ul.plain li{font-size:12.8px; color:var(--platinum); padding:5px 0; padding-left:16px; position:relative;}
+ul.plain li:before{content:"—"; position:absolute; left:0; color:var(--gold);}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo-block fade-up delay-1">
-      <div class="logo-text">Joe Collection</div>
-      <div class="logo-sub">Premium Real Estate Advisory · Bangkok</div>
-    </div>
-    <div class="header-badge fade-up delay-2">Confidential Investment Memorandum · 2026</div>
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-left">JOE COLLECTION</div>
+  <div class="nav-right"><b>JOE</b> · +66 80-657-8387<br>joecollection.m@gmail.com</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-skyline"></div>
+  <div class="hero-overlay wrap">
+    <div class="hero-eyebrow">Bangkok CBD · High-Density Residential Land</div>
+    <h1 class="hero-title">4 Rai, Freehold, <em>63 Metres</em> of Frontage on Sukhumvit 55</h1>
+    <p class="hero-sub">Thonglor Soi 29 — inside a sub-500-metre enclave of The Monument, Khun by Yoo and Grand Centre Point. FAR 8:1 unlocks 51,200 m² of developable GFA on one of the last 4-rai assemblages left in the district.</p>
   </div>
+</div>
 
-  <div class="hero-section">
-    <div class="hero-label fade-up delay-2">Investment Grade Analysis — Prime CBD Asset</div>
-    <h1 class="hero-title fade-up delay-3">Land 4 Rai · <em>Sukhumvit 55</em><br>Thong Lo, Bangkok CBD</h1>
-    <p class="hero-sub fade-up delay-3">Freehold · Zoning Y.9 High-Density Residential · FAR 8 · 6,400 sqm · BTS Thong Lo Corridor</p>
-    <div class="fade-up delay-4">
-      <div class="price-hero">
-        <span class="price-main">฿ 2,560,000,000</span>
-        <span class="price-unit">THB</span>
-        <span class="price-per"><strong>฿ 1,600,000</strong> / sq. wah</span>
+<div class="wrap">
+
+<!-- 01 · ASSET AT A GLANCE -->
+<section id="s01">
+  <div class="section-label">01 · Asset at a Glance</div>
+  <div class="kpi-ribbon">
+    <div class="kpi-cell"><div class="kpi-label">Total Land Area</div><div class="kpi-value">4 Rai · 1,600 Wah²</div></div>
+    <div class="kpi-cell"><div class="kpi-label">BMA Zone / FAR</div><div class="kpi-value">Brown ย.9 · FAR 8:1</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Max GFA Permitted</div><div class="kpi-value">51,200 m²</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Est. Buildable Height</div><div class="kpi-value">~35–42 Floors*</div></div>
+    <div class="kpi-cell"><div class="kpi-label">BTS Thong Lo</div><div class="kpi-value">~2.0 km</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Est. GDV (Best Scenario)</div><div class="kpi-value">฿11.2 Billion</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Asking Price / Wah²</div><div class="kpi-value">฿1.6 Million</div></div>
+    <div class="kpi-cell"><div class="kpi-label">Title Type</div><div class="kpi-value">Chanote Freehold</div></div>
+  </div>
+  <p style="font-size:10.5px;color:var(--slate);margin-top:8px;">*Indicative massing based on FAR 8:1 and typical Bangkok setback/OSR envelopes for road width along Sukhumvit 55; final floor count subject to architectural and structural study.</p>
+</section>
+
+<!-- 02 · LAND OVERVIEW & LOCATION -->
+<section id="s02">
+  <div class="section-label">02 · Land Overview &amp; Location</div>
+  <h2 class="section-title">The Site</h2>
+  <div class="two-col">
+    <div>
+      <div class="chip-grid">
+        <div class="chip"><div class="chip-k">Title Type</div><div class="chip-v">Chanote (absolute freehold)</div></div>
+        <div class="chip"><div class="chip-k">BMA Zone</div><div class="chip-v">Brown ย.9 · High-density residential · FAR 8:1</div></div>
+        <div class="chip"><div class="chip-k">Total Area</div><div class="chip-v">4 Rai · 1,600 Wah² · 6,400 m²</div></div>
+        <div class="chip"><div class="chip-k">Plot Dimensions</div><div class="chip-v">63 m (frontage) × 102 m (depth) — rectangular</div></div>
+        <div class="chip"><div class="chip-k">Road Frontage</div><div class="chip-v">63 m directly on Sukhumvit 55 (Thonglor Rd)</div></div>
+        <div class="chip"><div class="chip-k">Secondary Access</div><div class="chip-v">Thong Lor Soi 29 alley (rear/side access)</div></div>
+        <div class="chip"><div class="chip-k">Current Use</div><div class="chip-v">Vacant, cleared plot — development-ready</div></div>
+        <div class="chip"><div class="chip-k">EIA Status</div><div class="chip-v">Required — GFA &gt;10,000 m² triggers EIA review</div></div>
       </div>
+      <div class="callout callout-gold">
+        <div class="callout-title">The Land</div>
+        <div class="callout-body"><i>"Unencumbered Chanote freehold title on a full 63-metre frontage. FAR 8:1 permits 51,200 m² of GFA — a mid-to-high-rise tower on Bangkok's most sought-after residential Soi. Zero legacy encumbrances, zero title complications. Development-ready on Day 1."</i></div>
+      </div>
+    </div>
+    <div>
+      <div class="stat-row"><span class="k">Nearest BTS/MRT</span><span class="v">Thong Lo (Sukhumvit Line) — ~2.0 km</span></div>
+      <div class="stat-row"><span class="k">Access Mode</span><span class="v">5–8 min by car / motorcycle taxi</span></div>
+      <div class="stat-row"><span class="k">Distance to Sukhumvit Core</span><span class="v">Asok/Phrom Phong ~4–5 km</span></div>
+      <div class="stat-row"><span class="k">Road Access</span><span class="v">Sukhumvit 55 arterial + Soi 29 alley</span></div>
+      <div class="stat-row"><span class="k">Nearest Landmark</span><span class="v">The Monument Thonglor (opposite)</span></div>
+      <div class="stat-row"><span class="k">Immediate Neighbours</span><span class="v">Khun by Yoo, Grand Centre Point, Camillian Hospital</span></div>
+      <div class="callout callout-teal">
+        <div class="callout-title">Sub-Market Land Price Trend</div>
+        <div class="callout-body">Colliers Thailand reports Sukhumvit–Thonglor land transacting at ~<b style="color:var(--teal)">฿2.86M/Wah²</b> in 2025, with CBD land broadly appreciating <b style="color:var(--teal)">10%+ per year</b> and owners increasingly reluctant to sell. Historic Thonglor-specific data (Plus Property / Nexus) shows a <b style="color:var(--teal)">15–19% CAGR</b> over the past decade on prime sois. This asking price sits meaningfully below the current district benchmark.</div>
+      </div>
+      <div class="map-card">📍 GPS: <a href="https://maps.app.goo.gl/pLK4PwKNnurS9JCq7" target="_blank">Open in Google Maps →</a></div>
     </div>
   </div>
-</header>
+</section>
 
-<main>
+<!-- 03 · DEVELOPMENT SCENARIO ANALYSIS -->
+<section id="s03">
+  <div class="section-label">03 · Development Scenario Analysis</div>
+  <h2 class="section-title">Four Paths to Value</h2>
+  <div class="scenario-grid">
 
-  <section class="fade-up delay-1">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">Property Fundamentals</h2>
-      <div class="section-line"></div>
+    <div class="scenario-card">
+      <div class="scenario-num">SCENARIO 1</div>
+      <div class="scenario-name">Land Bank &amp; Hold</div>
+      <div class="scenario-desc">Acquire at today's below-market basis. Hold 4 years as Thonglor CBD land compounds. Exit to a developer with planning intelligence already assembled — zero construction risk.</div>
+      <div class="scenario-metrics">
+        <div class="metric"><div class="metric-k">Apprec. Rate (p.a.)</div><div class="metric-v">12%</div></div>
+        <div class="metric"><div class="metric-k">Exit Land Value (Yr 4)</div><div class="metric-v">฿3.87B</div></div>
+        <div class="metric"><div class="metric-k">MOIC</div><div class="metric-v">1.51×</div></div>
+        <div class="metric"><div class="metric-k">IRR</div><div class="metric-v">~11%</div></div>
+      </div>
+      <span class="risk-tag risk-low">Risk: Low</span>
     </div>
-    <div class="grid-4" style="margin-bottom:16px;">
-      <div class="stat-tile accent-gold">
-        <div class="stat-label">Land Area</div>
-        <div class="stat-value">4</div>
-        <div class="stat-unit">Rai · 1,600 sq.wah · 6,400 sqm</div>
-      </div>
-      <div class="stat-tile accent-gold">
-        <div class="stat-label">Plot Dimensions</div>
-        <div class="stat-value">63 × 102</div>
-        <div class="stat-unit">metres (Width × Depth)</div>
-      </div>
-      <div class="stat-tile accent-blue">
-        <div class="stat-label">Floor Area Ratio</div>
-        <div class="stat-value">8.0×</div>
-        <div class="stat-unit">Highest tier in Bangkok</div>
-      </div>
-      <div class="stat-tile accent-blue">
-        <div class="stat-label">Open Space Ratio</div>
-        <div class="stat-value">4.5%</div>
-        <div class="stat-unit">Min. 288 sqm open area</div>
-      </div>
-    </div>
-    <div class="grid-4">
-      <div class="stat-tile">
-        <div class="stat-label">Zoning</div>
-        <div class="stat-value" style="font-size:18px;">Y.9 (ย.9)</div>
-        <div class="stat-unit">High-Density Residential</div>
-      </div>
-      <div class="stat-tile accent-green">
-        <div class="stat-label">Max Gross Floor Area</div>
-        <div class="stat-value">51,200</div>
-        <div class="stat-unit">sqm (FAR 8 × 6,400)</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-label">Land Tenure</div>
-        <div class="stat-value" style="font-size:18px;">Freehold</div>
-        <div class="stat-unit">Chanote Title Deed</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-label">Road Frontage</div>
-        <div class="stat-value" style="font-size:18px;">63 m</div>
-        <div class="stat-unit">Facing Sukhumvit 55 Road</div>
-      </div>
-    </div>
-  </section>
 
-  <section class="fade-up delay-2">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">Location Intelligence</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="grid-2">
-      <div class="card">
-        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Immediate Surroundings</p>
-        <ul class="bullet-list">
-          <li><strong style="color:var(--text-primary);">The Monument Thong Lo</strong> — Ultra-luxury condominium directly opposite the plot (transacted at ฿350,000–500,000/sqm), the most prestigious comp in the submarket</li>
-          <li><strong style="color:var(--text-primary);">Khun by Yoo & Grand Centerpoint</strong> — International ultra-luxury branded residence enclave forming a premium cluster</li>
-          <li><strong style="color:var(--text-primary);">Camillian Hospital</strong> — Premium private hospital on the same alley, reinforcing the high-income demographic</li>
-          <li><strong style="color:var(--text-primary);">D25 Condominium</strong> — High-end residential project in the immediate vicinity</li>
-          <li><strong style="color:var(--text-primary);">Thong Lo Soi 29</strong> — One of Bangkok's most sought-after lifestyle addresses; restaurants, boutiques, galleries</li>
-        </ul>
+    <div class="scenario-card best">
+      <span class="badge-best">★ Best Scenario</span>
+      <div class="scenario-num">SCENARIO 2</div>
+      <div class="scenario-name">Luxury Condominium Tower</div>
+      <div class="scenario-desc">Maximise residential FAR. Est. ~40-floor tower, ~400 units, pre-sale model targeting 70% sold before topping out. Fastest profit realisation and the strongest fit for Thonglor's proven luxury absorption.</div>
+      <div class="scenario-metrics">
+        <div class="metric"><div class="metric-k">Total GDV</div><div class="metric-v">฿11.18B</div></div>
+        <div class="metric"><div class="metric-k">Sellable Area</div><div class="metric-v">39,936 m²</div></div>
+        <div class="metric"><div class="metric-k">Blended ASP</div><div class="metric-v">฿280,000/m²</div></div>
+        <div class="metric"><div class="metric-k">Net Profit</div><div class="metric-v">฿4.12B</div></div>
+        <div class="metric"><div class="metric-k">IRR (Unlev. / Lev. 50%)</div><div class="metric-v">~24% / ~37%</div></div>
+        <div class="metric"><div class="metric-k">MOIC</div><div class="metric-v">1.58×</div></div>
       </div>
-      <div class="card">
-        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Connectivity & Infrastructure</p>
-        <ul class="bullet-list">
-          <li><strong style="color:var(--text-primary);">BTS Thong Lo Station</strong> — Approx. 400 m walk, seamless mass-transit access</li>
-          <li><strong style="color:var(--text-primary);">Sukhumvit 55 Road</strong> — Direct frontage on the main arterial road; exceptional brand visibility</li>
-          <li><strong style="color:var(--text-primary);">Central EM District</strong> — 1.5 km to EmQuartier, EmSphere & Emporium; Bangkok's premier luxury retail cluster</li>
-          <li><strong style="color:var(--text-primary);">Asoke / Terminal 21</strong> — Approx. 3 km; major business & transit hub</li>
-          <li><strong style="color:var(--text-primary);">Suvarnabhumi Airport</strong> — ~30 minutes via expressway; critical for international buyers</li>
-        </ul>
-      </div>
+      <span class="risk-tag risk-med">Risk: Medium</span>
     </div>
-    <div class="highlight-box" style="margin-top:16px;">
-      <p><strong style="color:var(--gold-light);">✦ Location Moat:</strong> This plot commands a genuine <strong style="color:var(--text-primary);">AAA micro-location</strong> within Thong Lo — Bangkok's most internationally recognised luxury residential address. The combination of a 63-metre frontage on Sukhumvit 55, proximity to The Monument, BTS walkability, and an entrenched high-income expat demographic creates a <strong style="color:var(--text-primary);">near-irreplaceable competitive moat</strong>. Comparable land parcels of this scale and frontage in the same submarket are effectively non-existent in today's market.</p>
-    </div>
-  </section>
 
-  <section class="fade-up delay-2">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">GFA Optimization & Development Envelope</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="table-hint">Swipe left/right to view full table ⟷</p>
-    <div class="table-responsive-wrapper">
-      <table>
-        <thead>
-          <tr><th>Parameter</th><th>Calculation</th><th>Value</th><th>Remark</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="highlight">Land Area</td><td>Given</td><td class="gold">6,400 sqm</td><td>4 Rai · 1,600 sq. wah</td></tr>
-          <tr><td class="highlight">Maximum GFA (Gross)</td><td>6,400 × FAR 8</td><td class="gold">51,200 sqm</td><td>Per Zoning Y.9 regulations</td></tr>
-          <tr><td class="highlight">OSR Requirement</td><td>6,400 × 4.5%</td><td>288 sqm</td><td>Minimum open space area</td></tr>
-          <tr><td class="highlight">Efficiency Ratio</td><td>Saleable ÷ GFA</td><td class="green">~72–75%</td><td>After deducting common areas, core, circulation</td></tr>
-          <tr><td class="highlight">Net Saleable Area</td><td>51,200 × 73%</td><td class="green">~37,376 sqm</td><td>Estimated net sellable area</td></tr>
-          <tr><td class="highlight">Recommended Tower Height</td><td>FAR + Optimised Footprint</td><td class="gold">~35–45 floors</td><td>Slender tower above 5-floor podium</td></tr>
-          <tr><td class="highlight">Building Footprint (Est.)</td><td>~50% of land</td><td>~3,200 sqm</td><td>Balance for landscaping, amenities, drop-off</td></tr>
-          <tr><td class="highlight">Land Cost per GFA sqm</td><td>฿2,560M ÷ 51,200</td><td class="green">฿50,000/sqm GFA</td><td>Exceptionally low for prime CBD land</td></tr>
-        </tbody>
+    <div class="scenario-card">
+      <div class="scenario-num">SCENARIO 3</div>
+      <div class="scenario-name">Mixed-Use Development</div>
+      <div class="scenario-desc">Podium retail/F&amp;B (Fl. 1–6) + boutique office (Fl. 7–20) + residential (Fl. 21+). Diversified income base and stronger institutional exit profile — traded off against lower headline GDV than pure residential.</div>
+      <table style="width:100%; min-width:0; font-size:11.5px; margin-top:4px; margin-bottom:10px;">
+        <tr><td style="color:var(--slate); padding:3px 0;">Floors 1–6</td><td style="text-align:right; color:var(--platinum);">Retail/F&amp;B · 3,584 m² NLA</td></tr>
+        <tr><td style="color:var(--slate); padding:3px 0;">Floors 7–20</td><td style="text-align:right; color:var(--platinum);">Office · 9,984 m² NLA</td></tr>
+        <tr><td style="color:var(--slate); padding:3px 0;">Floors 21+</td><td style="text-align:right; color:var(--platinum);">Residential · 23,962 m² sellable</td></tr>
       </table>
-    </div>
-    <div class="highlight-box">
-      <p><strong style="color:var(--gold-light);">Optimal Design Strategy:</strong> A <strong style="color:var(--text-primary);">Slender Tower</strong> configuration (approx. 35–45 floors) rising above a 5-floor amenity podium maximises GFA whilst achieving premium <strong style="color:var(--text-primary);">City Skyline and Chao Phraya River views</strong> from upper floors. Upper-floor units typically command an ASP premium of <strong style="color:var(--text-primary);">+15–25%</strong> versus mid-floor units, directly amplifying total project revenue. The 63-metre frontage also allows for a grand porte-cochère entrance — a hallmark of ultra-luxury residential design in Bangkok.</p>
-    </div>
-  </section>
-
-  <section class="fade-up delay-2">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">Development Scenarios</h2>
-      <div class="section-line"></div>
+      <div class="scenario-metrics">
+        <div class="metric"><div class="metric-k">Total GDV</div><div class="metric-v">฿8.86B</div></div>
+        <div class="metric"><div class="metric-k">Net Profit</div><div class="metric-v">฿1.91B</div></div>
+        <div class="metric"><div class="metric-k">Margin (% GDV)</div><div class="metric-v">21.6%</div></div>
+        <div class="metric"><div class="metric-k">Commercial Yield</div><div class="metric-v">~6.0–6.5%</div></div>
+      </div>
+      <span class="risk-tag risk-med">Risk: Medium</span>
     </div>
 
-    <div class="scenario" style="border-color:rgba(76,175,114,0.4);margin-bottom:16px;">
-      <div class="scenario-head">
-        <div>
-          <div style="font-size:10px;letter-spacing:0.2em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;">Scenario A</div>
-          <div class="scenario-name">Ultra-Luxury Freehold Condominium</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:6px;">Standalone freehold residential tower · Target ASP ฿350,000–500,000/sqm · Domestic & International UHNWI buyers</div>
-        </div>
-        <span class="scenario-badge badge-recommended">★ Recommended</span>
+    <div class="scenario-card">
+      <div class="scenario-num">SCENARIO 4</div>
+      <div class="scenario-name">Commercial Landmark (Serviced Apartment)</div>
+      <div class="scenario-desc">Full serviced-apartment / long-stay format targeting LTR-visa demand. At current land basis, cap-rate valuation does not clear construction + land cost — flagged as the weakest scenario, not a recommended primary use for this site.</div>
+      <div class="scenario-metrics">
+        <div class="metric"><div class="metric-k">Stabilised Value</div><div class="metric-v">฿5.62B</div></div>
+        <div class="metric"><div class="metric-k">Est. NOI</div><div class="metric-v">฿366M</div></div>
+        <div class="metric"><div class="metric-k">Cap Rate</div><div class="metric-v">6.5%</div></div>
+        <div class="metric"><div class="metric-k">Net Position</div><div class="metric-v" style="color:#e28a7a;">Negative</div></div>
       </div>
-      <div class="divider"></div>
-      <div class="grid-2">
-        <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
-          <div class="table-responsive-wrapper">
-            <table>
-              <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
-              <tbody>
-                <tr><td>Net Saleable Area</td><td class="gold">37,376 sqm</td></tr>
-                <tr><td>ASP — Conservative Estimate</td><td class="highlight">฿380,000 / sqm</td></tr>
-                <tr><td>Gross Revenue</td><td class="green">฿14,203 million</td></tr>
-                <tr><td>Land Acquisition Cost</td><td>฿2,560 million</td></tr>
-                <tr><td>Construction Cost</td><td>฿5,120 million (~฿100K/sqm GFA)</td></tr>
-                <tr><td>Marketing, Finance & Other</td><td>฿1,420 million (~10%)</td></tr>
-                <tr><td class="highlight">Total Project Cost</td><td class="red-text">฿9,100 million</td></tr>
-                <tr><td class="highlight">Gross Profit</td><td class="green">฿5,103 million</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <div class="scenario-metrics">
-            <div class="metric-mini"><div class="val g">35.9%</div><div class="lbl">Gross Margin</div></div>
-            <div class="metric-mini"><div class="val g">56.1%</div><div class="lbl">ROIC</div></div>
-            <div class="metric-mini"><div class="val g">22–26%</div><div class="lbl">IRR (5-yr)</div></div>
-          </div>
-          <div style="margin-top:16px;">
-            <ul class="bullet-list">
-              <li>Leverages the brand halo of The Monument next door; the strongest comparable in Bangkok</li>
-              <li>Target: Thai & international UHNWI — Japanese, Korean, Chinese, and European Corporate Expats</li>
-              <li>Unit mix: 1BR (35–55 sqm), 2BR (70–100 sqm), Penthouse (200–400 sqm)</li>
-              <li>Pre-sale strategy: Soft launch targeting ≥30% take-up prior to full EIA approval</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <span class="risk-tag risk-high">Risk: High / Not Recommended</span>
     </div>
 
-    <div class="scenario" style="border-color:rgba(201,168,76,0.4);margin-bottom:16px;">
-      <div class="scenario-head">
-        <div>
-          <div style="font-size:10px;letter-spacing:0.2em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;">Scenario B</div>
-          <div class="scenario-name">Mixed-Use: Luxury Condo + International Branded Residences</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:6px;">Global brand partnership (Marriott / Four Seasons / Rosewood) · Target ASP ฿450,000–600,000/sqm</div>
-        </div>
-        <span class="scenario-badge badge-premium">Premium Play</span>
-      </div>
-      <div class="divider"></div>
-      <div class="grid-2">
-        <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
-          <div class="table-responsive-wrapper">
-            <table>
-              <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
-              <tbody>
-                <tr><td>Net Saleable Area</td><td class="gold">35,000 sqm</td></tr>
-                <tr><td>Blended ASP</td><td class="highlight">฿480,000 / sqm</td></tr>
-                <tr><td>Gross Revenue</td><td class="green">฿16,800 million</td></tr>
-                <tr><td>Land Acquisition Cost</td><td>฿2,560 million</td></tr>
-                <tr><td>Construction Cost</td><td>฿6,000 million (~฿115K/sqm GFA)</td></tr>
-                <tr><td>Brand Fee + Marketing + Finance</td><td>฿2,016 million (~12%)</td></tr>
-                <tr><td class="highlight">Total Project Cost</td><td class="red-text">฿10,576 million</td></tr>
-                <tr><td class="highlight">Gross Profit</td><td class="green">฿6,224 million</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <div class="scenario-metrics">
-            <div class="metric-mini"><div class="val gl">37.0%</div><div class="lbl">Gross Margin</div></div>
-            <div class="metric-mini"><div class="val gl">58.9%</div><div class="lbl">ROIC</div></div>
-            <div class="metric-mini"><div class="val gl">24–28%</div><div class="lbl">IRR (6-yr)</div></div>
-          </div>
-          <div style="margin-top:16px;">
-            <ul class="bullet-list">
-              <li>Brand partnership with operators such as Marriott Residences, Four Seasons, or Rosewood Private Residences</li>
-              <li>Branded residences on upper floors; commercial / F&B podium on lower floors</li>
-              <li>Commands a substantial ASP premium of +20–30% vs. non-branded comparable product</li>
-              <li>Timeline extended by approx. +12 months for brand negotiation and design approval process</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="callout callout-teal" style="margin-top:20px;">
+    <div class="callout-title">Blind Spot Check</div>
+    <div class="callout-body">The math only supports one clear winner here — the residential condominium tower. Mixed-use is defensible as a risk-diversification play but sacrifices ~฿2.2B of headline GDV. Commercial/hospitality use actively destroys value at this land basis and should not be pursued as a standalone strategy. Any underwriting that assumes otherwise needs to be stress-tested before capital commits.</div>
+  </div>
+</section>
 
-    <div class="scenario" style="border-color:rgba(92,143,224,0.4);">
-      <div class="scenario-head">
-        <div>
-          <div style="font-size:10px;letter-spacing:0.2em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;">Scenario C</div>
-          <div class="scenario-name">Strategic Land Banking & Disposition</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:6px;">Hold 3–5 years for capital appreciation, then exit via outright sale or JV with a listed developer</div>
-        </div>
-        <span class="scenario-badge badge-alt">Alternative</span>
-      </div>
-      <div class="divider"></div>
-      <div class="grid-2">
-        <div>
-          <p class="table-hint">Swipe left/right to view full table ⟷</p>
-          <div class="table-responsive-wrapper">
-            <table>
-              <thead><tr><th>Line Item</th><th>Amount</th></tr></thead>
-              <tbody>
-                <tr><td>Acquisition Price</td><td class="gold">฿2,560 million</td></tr>
-                <tr><td>Land Appreciation (5 yrs @ 8%/yr)</td><td class="green">+฿1,200 million</td></tr>
-                <tr><td>JV / Developer Premium</td><td class="green">+฿400–800 million</td></tr>
-                <tr><td>Estimated Exit Value</td><td class="green">฿3,800–4,200 million</td></tr>
-                <tr><td>Holding Cost (5-yr est.)</td><td class="red-text">฿640 million (~5%/yr)</td></tr>
-                <tr><td class="highlight">Net Capital Gain</td><td class="green">฿600–1,000 million</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <div class="scenario-metrics">
-            <div class="metric-mini"><div class="val b">23–39%</div><div class="lbl">Total Return</div></div>
-            <div class="metric-mini"><div class="val b">8–12%</div><div class="lbl">IRR (5-yr)</div></div>
-            <div class="metric-mini"><div class="val b">Low</div><div class="lbl">Risk Level</div></div>
-          </div>
-          <div style="margin-top:16px;">
-            <ul class="bullet-list">
-              <li>Ideal for passive investors seeking capital appreciation without development execution risk</li>
-              <li>JV with a listed developer (SANSIRI, AP, SC Asset, MQDC) achievable at a significant premium to carrying value</li>
-              <li>Lower IRR but superior risk-adjusted return profile for family offices or institutional passive holders</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- 04 · GDV MODEL & FINANCIAL COMPARISON -->
+<section id="s04">
+  <div class="section-label">04 · GDV Model &amp; Financial Comparison</div>
+  <h2 class="section-title">Scenario Comparison Table</h2>
+  <div class="swipe-hint">↔ Swipe to see all columns</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Metric</th><th>1 · Land Bank</th><th>2 · ★ Condo Tower</th><th>3 · Mixed-Use</th><th>4 · Serviced Apt.</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Total GFA (m²)</td><td>—</td><td>51,200</td><td>51,200</td><td>51,200</td></tr>
+        <tr><td>Sellable / NLA (m²)</td><td>—</td><td>39,936</td><td>37,530</td><td>35,840</td></tr>
+        <tr><td>Avg. ASP / Rent</td><td>—</td><td>฿280,000/m²</td><td>Blended</td><td>฿850/m²/mo</td></tr>
+        <tr><td>Gross Development Value</td><td>฿3.87B (exit)</td><td>฿11.18B</td><td>฿8.86B</td><td>฿5.62B</td></tr>
+        <tr><td>Land Cost</td><td>฿2.56B</td><td>฿2.56B</td><td>฿2.56B</td><td>฿2.56B</td></tr>
+        <tr><td>Construction Cost</td><td>—</td><td>฿3.17B</td><td>฿3.58B</td><td>฿3.48B</td></tr>
+        <tr><td>Soft Costs + Finance</td><td>฿0.15B</td><td>฿1.01B</td><td>฿0.80B</td><td>฿0.63B</td></tr>
+        <tr><td>Sales &amp; Marketing</td><td>—</td><td>฿0.45B</td><td>฿0.35B</td><td>—</td></tr>
+        <tr><td>Net Development Profit</td><td>฿1.31B</td><td>฿4.12B</td><td>฿1.91B</td><td style="color:#e28a7a;">−฿1.05B</td></tr>
+        <tr><td>Developer Margin (% GDV)</td><td>—</td><td>36.9%</td><td>21.6%</td><td>—</td></tr>
+        <tr><td>IRR (Unleveraged)</td><td>~11%</td><td>~24%</td><td>~16%</td><td>n/a</td></tr>
+        <tr><td>IRR (Leveraged, 50% LTC)</td><td>n/a</td><td>~37%</td><td>~26%</td><td>n/a</td></tr>
+        <tr><td>MOIC</td><td>1.51×</td><td>1.58×</td><td>1.27×</td><td>&lt;1.0×</td></tr>
+        <tr><td>Timeline to Full Exit</td><td>4 yrs</td><td>4.5 yrs</td><td>5.5 yrs</td><td>6+ yrs</td></tr>
+        <tr><td>Risk Level</td><td>Low</td><td>Medium</td><td>Medium</td><td>High</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="5">Verdict: Scenario 2 (★ Condo Tower) delivers the strongest risk-adjusted return — highest MOIC, shortest timeline, and best fit for proven Thonglor luxury demand.</td></tr></tfoot>
+    </table>
+  </div>
+  <p class="table-footnote">Figures are indicative estimates based on current market ASP/rent benchmarks and standard Bangkok build-cost ranges. Not a substitute for a full third-party feasibility study.</p>
+</section>
 
-  <section class="fade-up delay-3">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2 class="section-title">Financial Model Summary</h2>
-      <div class="section-line"></div>
+<!-- 05 · COMPARABLE LAND TRANSACTIONS -->
+<section id="s05">
+  <div class="section-label">05 · Comparable Land Transactions</div>
+  <h2 class="section-title">Benchmarking the Asking Price</h2>
+  <div class="swipe-hint">↔ Swipe to see all columns</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Location / District</th><th>Area (Wah²)</th><th>Price/Wah² (฿)</th><th>Total Price</th><th>BMA Zone</th><th>BTS Proximity</th><th>Year</th><th></th>
+      </tr></thead>
+      <tbody>
+        <tr class="tier-subject"><td>Sukhumvit 55, Thonglor Soi 29 (Subject)</td><td>1,600</td><td>1,600,000</td><td>฿2,560M</td><td>Brown ย.9</td><td>~2.0 km</td><td>2026</td><td><span class="tag tag-subject">This Land</span></td></tr>
+        <tr><td>Sukhumvit–Thonglor benchmark (Colliers)</td><td>n/a</td><td>2,860,000</td><td>—</td><td>Brown/CBD</td><td>Varies</td><td>2025</td><td><span class="tag tag-comp">Comp</span></td></tr>
+        <tr><td>Sarasin Road (Sansiri acquisition)</td><td>n/a</td><td>3,900,000</td><td>—</td><td>CBD</td><td>&lt;500m</td><td>2025</td><td><span class="tag tag-comp">Comp</span></td></tr>
+        <tr><td>Soi Sukhumvit 59</td><td>429</td><td>1,590,000</td><td>฿682M</td><td>Residential</td><td>~1.5 km</td><td>2025</td><td><span class="tag tag-comp">Comp</span></td></tr>
+        <tr><td>Thonglor Soi 23 (with structures)</td><td>269</td><td>900,000</td><td>฿242M</td><td>Residential</td><td>~2.0 km</td><td>2025</td><td><span class="tag tag-comp">Comp</span></td></tr>
+        <tr><td>Sukhumvit 61 (EIA-approved dev. site)</td><td>553</td><td>~1,050,000</td><td>~฿581M</td><td>Residential</td><td>&lt;1 km (Ekkamai)</td><td>2025</td><td><span class="tag tag-dev">Active Dev.</span></td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="8">Subject asking price represents a ~44% discount to the current Colliers Sukhumvit–Thonglor benchmark of ฿2.86M/Wah².</td></tr></tfoot>
+    </table>
+  </div>
+  <p class="table-footnote">Sources: Colliers Thailand (Bangkok land price report, Oct 2025), Nation Thailand, Bangkok Post Property, JST Realty, PropertyHub, FazWaz listings. Comparable pricing varies with plot size, shape and precise frontage — treat as directional, not appraisal-grade.</p>
+</section>
+
+<!-- 06 · MARKET INTELLIGENCE -->
+<section id="s06">
+  <div class="section-label">06 · Market Intelligence</div>
+  <h2 class="section-title">Bangkok Condominium Market</h2>
+  <div class="two-col">
+    <div>
+      <div class="stat-row"><span class="k">Bangkok condo launches, Q1 2026</span><span class="v">9,480 units (+42.6% YoY)</span></div>
+      <div class="stat-row"><span class="k">Take-up rate, Q1 2026</span><span class="v">67.8%</span></div>
+      <div class="stat-row"><span class="k">Bangkok luxury condo net absorption</span><span class="v">665 units / quarter</span></div>
+      <div class="stat-row"><span class="k">Luxury condo capital value growth (YoY)</span><span class="v">+0.1% to +0.6% QoQ</span></div>
+      <div class="stat-row"><span class="k">Sub-market land price growth</span><span class="v">10–19% CAGR (Thonglor)</span></div>
+      <div class="stat-row"><span class="k">2025 citywide new launches</span><span class="v">~16,400 units (decade low)</span></div>
     </div>
-    <div class="card">
-      <p class="table-hint">Swipe left/right to view full table ⟷</p>
-      <div class="table-responsive-wrapper">
+    <div>
+      <div class="callout callout-teal">
+        <div class="callout-title">Structural Demand Drivers</div>
+        <div class="callout-body">
+          <ul class="plain">
+            <li>Bangkok's ~20M metro population continues concentrating demand in inner Sukhumvit corridors</li>
+            <li>Constrained new supply — 2025 launches were the lowest in over a decade, tightening the pipeline into 2026–27</li>
+            <li>Luxury segment (Thonglor/early-Sukhumvit) is the one submarket where JLL and Colliers both report launches concentrating and absorption holding up</li>
+            <li>LTR / Elite Visa programmes sustaining foreign HNW demand for freehold luxury product</li>
+            <li>Thai REIT market actively seeking stabilised commercial/mixed-use assets for fund listing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="callout callout-gold">
+    <div class="callout-title">Counter-Perspective</div>
+    <div class="callout-body">This is not a uniformly hot market. Citywide, Colliers describes intense price competition and developers relying on discounts to clear inventory, and CBD rental vacancy has sat at 18–22% in parts of Sukhumvit/Sathorn. The Thonglor luxury micro-market is the exception, not the rule — underwriting should assume disciplined, phased pre-sales rather than a repeat of the 2013–2019 boom-era absorption speed.</div>
+  </div>
+</section>
+
+<!-- 07 · LAND VALUATION ANALYSIS -->
+<section id="s07">
+  <div class="section-label">07 · Land Valuation Analysis</div>
+  <h2 class="section-title">Three Valuation Methods</h2>
+  <div class="two-col">
+    <div>
+      <h3 style="font-size:15px; color:var(--platinum); margin-bottom:12px; font-weight:600;">Method 1 — Comparable Sales (฿/Wah²)</h3>
+      <div class="wf-row"><div class="wf-label">This Land</div><div class="wf-bar-track"><div class="wf-bar wf-gold" style="width:41%;"></div></div><div class="wf-val">฿1.60M</div></div>
+      <div class="wf-row"><div class="wf-label">Sukhumvit 61 comp</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:27%;"></div></div><div class="wf-val">฿1.05M</div></div>
+      <div class="wf-row"><div class="wf-label">Sukhumvit 59 comp</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:41%;"></div></div><div class="wf-val">฿1.59M</div></div>
+      <div class="wf-row"><div class="wf-label">Thonglor benchmark</div><div class="wf-bar-track"><div class="wf-bar wf-gdv" style="width:100%;"></div></div><div class="wf-val">฿2.86M</div></div>
+      <div class="wf-row"><div class="wf-label">Sarasin Rd (CBD)</div><div class="wf-bar-track"><div class="wf-bar wf-gdv" style="width:100%;"></div></div><div class="wf-val">฿3.90M</div></div>
+
+      <h3 style="font-size:15px; color:var(--platinum); margin:24px 0 12px; font-weight:600;">Method 2 — Residual Land Value Waterfall</h3>
+      <div class="wf-row"><div class="wf-label">GDV (100%)</div><div class="wf-bar-track"><div class="wf-bar wf-gdv" style="width:100%;"></div></div><div class="wf-val">฿11,182M</div></div>
+      <div class="wf-row"><div class="wf-label">− Construction (28%)</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:28%;"></div></div><div class="wf-val">฿3,174M</div></div>
+      <div class="wf-row"><div class="wf-label">− Soft Costs (3%)</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:3%;"></div></div><div class="wf-val">฿317M</div></div>
+      <div class="wf-row"><div class="wf-label">− Finance (5%)</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:5%;"></div></div><div class="wf-val">฿559M</div></div>
+      <div class="wf-row"><div class="wf-label">− Dev. Margin (25%)</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:25%;"></div></div><div class="wf-val">฿2,796M</div></div>
+      <div class="wf-row"><div class="wf-label" style="color:var(--green-light); font-weight:700;">Residual Land Value</div><div class="wf-bar-track"><div class="wf-bar wf-green" style="width:39%;"></div></div><div class="wf-val" style="color:var(--green-light); font-weight:700;">฿4,336M</div></div>
+      <div class="wf-row"><div class="wf-label" style="color:var(--gold-light); font-weight:700;">Asking Price</div><div class="wf-bar-track"><div class="wf-bar wf-gold" style="width:23%;"></div></div><div class="wf-val" style="color:var(--gold-light); font-weight:700;">฿2,560M</div></div>
+
+      <div class="callout callout-green">
+        <div class="callout-title">Embedded Upside</div>
+        <div class="callout-body"><i>"Asking price of ฿1.6M/Wah² represents a ~41% discount to residual land value of ~฿2.71M/Wah² — meaningful embedded upside for the acquirer, and notably close to the independently-observed Colliers benchmark of ฿2.86M/Wah² for the district."</i></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:15px; color:var(--platinum); margin-bottom:12px; font-weight:600;">Method 3 — Treasury Appraisal vs Market</h3>
+      <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>Scenario A — Ultra-Luxury</th>
-              <th>Scenario B — Branded</th>
-              <th>Scenario C — Land Bank</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Basis</th><th>฿/Wah²</th><th>Premium</th></tr></thead>
           <tbody>
-            <tr><td class="highlight">Total Investment (฿M)</td><td>9,100</td><td>10,576</td><td>3,200 (est. holding)</td></tr>
-            <tr><td class="highlight">Gross Revenue (฿M)</td><td class="green">14,203</td><td class="green">16,800</td><td class="green">3,800–4,200</td></tr>
-            <tr><td class="highlight">Gross Profit (฿M)</td><td class="green">5,103</td><td class="green">6,224</td><td class="green">600–1,000</td></tr>
-            <tr><td class="highlight">Gross Profit Margin</td><td class="green">35.9%</td><td class="green">37.0%</td><td class="green">23–39%</td></tr>
-            <tr><td class="highlight">Net Profit Margin (NPM)*</td><td class="gold">~20–22%</td><td class="gold">~21–24%</td><td class="gold">~18–30%</td></tr>
-            <tr><td class="highlight">ROIC</td><td class="gold">56.1%</td><td class="gold">58.9%</td><td class="gold">18–31%</td></tr>
-            <tr><td class="highlight">IRR (Project Level)</td><td class="gold">22–26%</td><td class="gold">24–28%</td><td class="gold">8–12%</td></tr>
-            <tr><td class="highlight">Payback Period</td><td>4–5 years</td><td>5–6 years</td><td>5–7 years</td></tr>
-            <tr><td class="highlight">Break-Even ASP</td><td class="highlight">฿243,400 / sqm</td><td class="highlight">฿302,171 / sqm</td><td>N/A</td></tr>
-            <tr><td class="highlight">Safety Margin vs. Market</td><td class="green">+44–105%</td><td class="green">+18–66%</td><td>N/A</td></tr>
-            <tr><td class="highlight">Risk Level</td><td>Medium</td><td>Medium-High</td><td class="green">Low</td></tr>
+            <tr><td>Treasury (ราคาประเมิน) — Sukhumvit</td><td>~750,000</td><td>—</td></tr>
+            <tr><td>Historic Thonglor appraisal (2016–19)</td><td>420,000–480,000</td><td>—</td></tr>
+            <tr><td>Asking Price (Subject)</td><td>1,600,000</td><td>+113% to Treasury</td></tr>
+            <tr><td>Market Comp Average</td><td>2,020,000</td><td>+169% to Treasury</td></tr>
+            <tr><td>Residual Development Value</td><td>2,710,000</td><td>+261% to Treasury</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:11px;color:var(--text-muted);margin-top:14px;">* After corporate income tax, project finance interest, and management fees. Key assumptions: Loan interest rate 5.5–6% p.a., pre-sale target 70–80% before construction commencement, sales absorption period 3–4 years.</p>
-    </div>
-  </section>
+      <p class="table-footnote">Premiums over official Treasury appraisal of 150–400% are typical and expected for CBD-grade Bangkok land — the appraisal basis is a tax reference, not a market indicator.</p>
 
-  <section class="fade-up delay-3">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2 class="section-title">Investment Thesis</h2>
-      <div class="section-line"></div>
+      <h3 style="font-size:15px; color:var(--platinum); margin:22px 0 12px; font-weight:600;">Land Appreciation Projection</h3>
+      <div class="wf-row"><div class="wf-label">Current Asking</div><div class="wf-bar-track"><div class="wf-bar wf-gold" style="width:32%;"></div></div><div class="wf-val">฿1.60M</div></div>
+      <div class="wf-row"><div class="wf-label">Yr 1 (+12%)</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:36%;"></div></div><div class="wf-val">฿1.79M</div></div>
+      <div class="wf-row"><div class="wf-label">Yr 3</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:45%;"></div></div><div class="wf-val">฿2.25M</div></div>
+      <div class="wf-row"><div class="wf-label">Yr 5</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:56%;"></div></div><div class="wf-val">฿2.82M</div></div>
+      <div class="wf-row"><div class="wf-label" style="color:#e28a7a;">Residual Dev. Value</div><div class="wf-bar-track"><div class="wf-bar" style="width:100%; background:linear-gradient(90deg,#c0432f,#e28a7a);"></div></div><div class="wf-val" style="color:#e28a7a;">฿4.34B</div></div>
     </div>
-    <div class="grid-2">
-      <div class="card">
-        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Catalysts &amp; Strengths</p>
-        <ul class="bullet-list">
-          <li><strong style="color:var(--text-primary);">Irreplaceable Scarcity:</strong> A 4-Rai plot with 63-metre frontage on Sukhumvit 55 is a genuine once-in-a-generation acquisition — no comparable parcel of this scale exists in active inventory</li>
-          <li><strong style="color:var(--text-primary);">Ultra-Luxury Comparable Evidence:</strong> The Monument has transacted at ฿400,000–580,000/sqm, firmly validating market depth and appetite in this exact submarket</li>
-          <li><strong style="color:var(--text-primary);">Bangkok's Highest FAR Tier (8×):</strong> Delivers 51,200 sqm GFA from a 6,400 sqm land parcel — a powerful capital multiplier; land cost per GFA sqm is only ฿50,000</li>
-          <li><strong style="color:var(--text-primary);">Freehold Title (Chanote):</strong> Strongly preferred by international buyers seeking long-term asset ownership and estate planning certainty</li>
-          <li><strong style="color:var(--text-primary);">Structural Expat Demand:</strong> Thong Lo hosts the highest concentration of Japanese, Korean, and Chinese corporate expat residents in Bangkok — an affluent, captive buyer pool</li>
-          <li><strong style="color:var(--text-primary);">Infrastructure Convergence:</strong> BTS, expressway, and international airport connectivity all within immediate reach, underwriting long-term asset liquidity</li>
-        </ul>
-      </div>
-      <div class="card">
-        <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px;">Key Risks &amp; Assessment</p>
-        <div class="risk-item">
-          <span class="risk-name">EIA Approval Timeline</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-mid"></div></div>
-          <span class="risk-tag tag-mid">Moderate</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Interest Rate Environment</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-mid"></div></div>
-          <span class="risk-tag tag-mid">Moderate</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Market Absorption Rate</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-low"></div></div>
-          <span class="risk-tag tag-low">Low</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Construction Cost Overrun</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-mid"></div></div>
-          <span class="risk-tag tag-mid">Moderate</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Foreign Ownership Regulation</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-low"></div></div>
-          <span class="risk-tag tag-low">Low</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Competitive Supply Pipeline</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-mid"></div></div>
-          <span class="risk-tag tag-mid">Moderate</span>
-        </div>
-        <div class="risk-item">
-          <span class="risk-name">Macro / Political Risk</span>
-          <div class="risk-bar-wrap"><div class="risk-bar risk-low"></div></div>
-          <span class="risk-tag tag-low">Low</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="fade-up delay-4">
-    <div class="section-header">
-      <span class="section-num">07</span>
-      <h2 class="section-title">CFO Strategic Recommendation</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="card" style="border-color:rgba(201,168,76,0.4);">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
-        <div style="background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;">★</div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold-light);">Strong Buy · Scenario A as Primary Strategy</div>
-          <div style="font-size:11px;color:var(--text-muted);letter-spacing:0.1em;margin-top:4px;">Ultra-Luxury Freehold Condominium · Target IRR 22–26% · ROIC 56%+ · Investment Grade: A+</div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <p style="color:var(--text-primary);font-size:14px;margin-bottom:16px;line-height:2;">
-        Based on a comprehensive quantitative and qualitative analysis, this 4-Rai plot represents a <strong style="color:var(--gold-light);">"once-in-a-decade opportunity"</strong> in Bangkok's prime CBD real estate market, for the following critical reasons:
-      </p>
-      <ul class="bullet-list">
-        <li><strong style="color:var(--text-primary);">Compelling Land Pricing vs. Comparables:</strong> At ฿1.6M/sq. wah, this plot sits materially below recent Thong Lo land transactions which have cleared at ฿1.8–2.5M/sq. wah — representing meaningful embedded upside from day one of acquisition</li>
-        <li><strong style="color:var(--text-primary);">Extraordinary Safety Margin:</strong> Break-even ASP of ฿243,400/sqm versus current market pricing of ฿350,000–500,000+/sqm delivers a downside protection buffer of 44–105% — an exceptional margin of safety rarely seen in Bangkok prime CBD development</li>
-        <li><strong style="color:var(--text-primary);">Superior GFA Multiplier Economics:</strong> FAR 8 × 6,400 sqm = 51,200 sqm GFA on 4 Rai of land yields an effective land cost of just ฿50,000/sqm GFA — amongst the most efficient land cost structures available in Bangkok CBD today</li>
-        <li><strong style="color:var(--text-primary);">High Demand Visibility:</strong> The ultra-luxury segment in Thong Lo consistently operates with genuine buyer backlogs, particularly from Corporate Expat communities seeking permanent-ownership Freehold product — demand that cannot be satisfied by alternative locations</li>
-        <li><strong style="color:var(--text-primary);">Recommended Execution Roadmap:</strong> Initiate EIA process concurrently with Architectural Brief and concept design. Execute international soft launches (Singapore, Hong Kong, Tokyo) within 12 months. Target 40% pre-sale commitment prior to construction commencement to secure project financing on favourable terms</li>
-      </ul>
-      <div class="highlight-box" style="margin-top:20px;">
-        <p style="color:var(--text-primary);font-size:14px;font-weight:400;line-height:2;">
-          <strong style="color:var(--gold-light);">CFO Summary Verdict:</strong> With a project-level ROIC of ~56%, IRR of 22–26%, Gross Margin of ~36%, and a downside safety margin exceeding 44% above break-even ASP — this asset delivers a <strong style="color:var(--text-primary);">compelling risk-adjusted return profile</strong> for an experienced developer or developer-investor partnership with proven track record in Bangkok's luxury residential market. This is a rare, bankable, large-scale CBD land parcel with institutional-quality fundamentals. Investment Grade: <strong style="color:#7EE0A0;font-size:16px;">A+</strong>
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- 08 · DEVELOPMENT FEASIBILITY MODEL -->
+<section id="s08">
+  <div class="section-label">08 · Development Feasibility Model</div>
+  <h2 class="section-title">Scenario 2 Sensitivity — Condominium Tower</h2>
+  <div class="swipe-hint">↔ Swipe to see all columns</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Case</th><th>GDV</th><th>ASP</th><th>Construction</th><th>Net Profit</th><th>Margin %</th><th>IRR</th><th>MOIC</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative (−10% ASP, +10% cost)</td><td>฿10.06B</td><td>฿252,000/m²</td><td>฿3.49B</td><td>฿2.62B</td><td>26.0%</td><td>~17%</td><td>1.36×</td></tr>
+        <tr><td>Base Case</td><td>฿11.18B</td><td>฿280,000/m²</td><td>฿3.17B</td><td>฿4.12B</td><td>36.9%</td><td>~24%</td><td>1.58×</td></tr>
+        <tr><td>Upside (+10% ASP, −5% cost)</td><td>฿12.30B</td><td>฿308,000/m²</td><td>฿3.02B</td><td>฿5.62B</td><td>45.7%</td><td>~31%</td><td>1.79×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3 style="font-size:15px; color:var(--platinum); margin:24px 0 12px; font-weight:600;">Sensitivity — Impact on Net Profit</h3>
+  <div class="wf-row"><div class="wf-label">ASP −10%</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:63%;"></div></div><div class="wf-val">฿2.99B</div></div>
+  <div class="wf-row"><div class="wf-label">Construction +10%</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:78%;"></div></div><div class="wf-val">฿3.80B</div></div>
+  <div class="wf-row"><div class="wf-label">Sales Velocity −20%*</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:88%;"></div></div><div class="wf-val">฿4.12B</div></div>
+  <div class="wf-row"><div class="wf-label">Interest Rate +1%</div><div class="wf-bar-track"><div class="wf-bar wf-cost" style="width:92%;"></div></div><div class="wf-val">฿3.98B</div></div>
+  <div class="wf-row"><div class="wf-label">Base Case</div><div class="wf-bar-track"><div class="wf-bar wf-gold" style="width:100%;"></div></div><div class="wf-val">฿4.12B</div></div>
+  <p class="table-footnote">*Sales Velocity −20%: same total profit, delayed realisation — a slower sell-through pushes the same ฿4.12B further out in time, which compresses IRR even though nominal profit is unchanged.</p>
+  <p class="table-footnote">GDV based on blended Thonglor luxury ASP of ฿280,000/m² (below Khun by Yoo's ~฿300–360K/m² and Reserve Thonglor's ~฿250K/m² comps). Build cost benchmarked to 2025 high-rise condo range (฿50–75K/m²). EIA allowance included in soft costs. Finance at BOT reference rate + development spread. Figures are indicative and not a substitute for a licensed quantity surveyor's estimate.</p>
+</section>
 
-  <section class="fade-up delay-5">
-    <div class="contact-card">
-      <div style="font-size:10px;letter-spacing:0.35em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;">Exclusive Listing Agent</div>
+<!-- 09 · RETURNS ROADMAP (always full width) -->
+<section id="s09">
+  <div class="section-label">09 · Development Returns Roadmap</div>
+  <h2 class="section-title">Path to Exit</h2>
+
+  <div class="roadmap">
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div>
+        <div class="phase-num">PHASE 1</div>
+        <div class="phase-title">Acquisition &amp; Planning</div>
+        <div class="phase-time">Month 1–6</div>
+        <div class="phase-desc">Title transfer, topographic survey, structural feasibility study, appoint architect, engage EIA consultant, confirm FAR/OSR envelope with BMA.</div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div>
+        <div class="phase-num">PHASE 2</div>
+        <div class="phase-title">Design, EIA &amp; Pre-Sales</div>
+        <div class="phase-time">Month 6–18</div>
+        <div class="phase-desc">Schematic design, EIA submission and approval (12–18 months), building permit application, sales gallery launch, pre-sales target 50%+ sold before construction completes structure.</div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot"></div>
+      <div>
+        <div class="phase-num">PHASE 3</div>
+        <div class="phase-title">Construction</div>
+        <div class="phase-time">Year 2–4.5</div>
+        <div class="phase-desc">Piling, structure, MEP, fit-out, landscaping, progressive unit handovers as construction milestones complete.</div>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-dot final"></div>
+      <div>
+        <div class="phase-num">PHASE 4</div>
+        <div class="phase-title">Sell-Out &amp; Exit</div>
+        <div class="phase-time">Year 4–5</div>
+        <div class="phase-desc">Final unit handovers and transfers, warranty period commences, developer profit realisation complete.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-bottom:22px;">
+    <table>
+      <thead><tr><th>Scenario</th><th>Land Cost</th><th>Total Invest.</th><th>Net Profit</th><th>MOIC</th><th>IRR</th><th>Timeline</th></tr></thead>
+      <tbody>
+        <tr><td>Land Bank</td><td>฿2.56B</td><td>฿2.71B</td><td>฿1.31B</td><td>1.51×</td><td>~11%</td><td>4 yrs</td></tr>
+        <tr class="tier-subject"><td>★ Condo Tower</td><td>฿2.56B</td><td>฿7.06B</td><td>฿4.12B</td><td>1.58×</td><td>~24%</td><td>4.5 yrs</td></tr>
+        <tr><td>Mixed-Use</td><td>฿2.56B</td><td>฿6.95B</td><td>฿1.91B</td><td>1.27×</td><td>~16%</td><td>5.5 yrs</td></tr>
+        <tr><td>Serviced Apartment</td><td>฿2.56B</td><td>฿6.67B</td><td style="color:#e28a7a;">−฿1.05B</td><td>&lt;1.0×</td><td>n/a</td><td>6+ yrs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">Land / Asset Upside</div>
+    <div class="callout-body"><i>"At FAR 8:1, this 1,600 Wah² site permits 51,200 m² of GFA — equivalent to a 35–40 floor tower. Land value floor is growing at 10%+ per year in Thonglor. Downside is protected by Bangkok's permanently constrained CBD-adjacent land supply — this scale of freehold assemblage is not being replicated in this district."</i></div>
+  </div>
+
+  <div class="chip-grid" style="margin-top:20px;">
+    <div class="chip"><div class="chip-k">Thai REIT Market AUM</div><div class="chip-v">Growing — active demand for stabilised commercial assets</div></div>
+    <div class="chip"><div class="chip-k">Grade A Office/Retail Cap Rate</div><div class="chip-v">6.0% – 7.0%</div></div>
+    <div class="chip"><div class="chip-k">Active PLC Land Acquisition</div><div class="chip-v">AP, Sansiri, Origin, Ananda, SC Asset all active in Sukhumvit corridor</div></div>
+  </div>
+</section>
+
+<!-- 10 · RISK MATRIX -->
+<section id="s10">
+  <div class="section-label">10 · Risk Matrix</div>
+  <h2 class="section-title">Eight Key Risks</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Risk Factor</th><th>Severity</th><th>Probability</th><th>Mitigant</th></tr></thead>
+      <tbody>
+        <tr><td>EIA Approval Delay</td><td class="sev-high">High</td><td>Likely</td><td>Engage EIA consultant pre-acquisition; 12–18 month process for &gt;10,000 m² GFA</td></tr>
+        <tr><td>City Plan FAR Revision</td><td class="sev-med">Medium</td><td>Possible</td><td>BMA City Plan revised ~every 5 years; lock design decisions to current FAR early</td></tr>
+        <tr><td>Construction Cost Escalation</td><td class="sev-med">Medium</td><td>Likely</td><td>Fixed-price contracts, staged procurement, contingency in soft costs</td></tr>
+        <tr><td>Pre-Sale Absorption Miss</td><td class="sev-high">High</td><td>Possible</td><td>Monitor luxury segment take-up (67.8% Q1 2026); phase launch to demand</td></tr>
+        <tr><td>Interest Rate / Finance Cost</td><td class="sev-med">Medium</td><td>Possible</td><td>Fix rate on construction facility; monitor BOT policy rate</td></tr>
+        <tr><td>Sub-Market Oversupply</td><td class="sev-med">Medium</td><td>Low–Moderate</td><td>Thonglor luxury supply remains disciplined vs. outer-Sukhumvit oversupply</td></tr>
+        <tr><td>Foreign Buyer Quota (49%)</td><td class="sev-low">Low</td><td>Low</td><td>Manage unit mix and marketing allocation across domestic/foreign buyers</td></tr>
+        <tr><td>Title / Assemblage Risk</td><td class="sev-low">Low</td><td>Low</td><td>Single Chanote title, single owner — no multi-plot consolidation required</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 11 · LOCATION SHOWCASE -->
+<section id="s11">
+  <div class="section-label">11 · Location Showcase</div>
+  <h2 class="section-title">Why Thonglor Soi 29</h2>
+  <div class="loc-grid">
+    <div class="loc-card"><div class="loc-icon">🚇</div><div class="loc-title">BTS Connectivity</div><div class="loc-body">Thong Lo Station (Sukhumvit Line) ~2.0 km away — a short drive or motorcycle taxi rather than a walkable TOD site, consistent with upper-Thonglor's car-and-driver residential character.</div></div>
+    <div class="loc-card"><div class="loc-icon">🏙️</div><div class="loc-title">CBD Proximity</div><div class="loc-body">~4–5 km to the Asok/Phrom Phong Sukhumvit core; positioned within Bangkok's premier east-Sukhumvit residential belt rather than the office CBD proper.</div></div>
+    <div class="loc-card"><div class="loc-icon">💎</div><div class="loc-title">Ultra-Luxury Enclave</div><div class="loc-body">Immediate neighbours: The Monument Thonglor (Sansiri, 45F), Khun by Yoo (Sansiri × Philippe Starck, 27F), and Grand Centre Point — a proven address for Bangkok's top-tier developers.</div></div>
+    <div class="loc-card"><div class="loc-icon">🛣️</div><div class="loc-title">Infrastructure</div><div class="loc-body">Full 63 m frontage on Sukhumvit 55, plus rear/side access via Thong Lor Soi 29. Established CBD-grade utilities corridor.</div></div>
+    <div class="loc-card"><div class="loc-icon">🏥</div><div class="loc-title">Lifestyle &amp; Amenities</div><div class="loc-body">Camillian Hospital adjacent; Thonglor's dining, retail and international-school ecosystem within the broader 1–2 km radius.</div></div>
+    <div class="loc-card"><div class="loc-icon">📈</div><div class="loc-title">Future Catalysts</div><div class="loc-body">Continued densification along the Sukhumvit corridor and sustained developer land appetite from major listed PLCs (AP, Sansiri, Ananda, SC Asset) support the district's long-term value trajectory.</div></div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="score-row"><div class="score-top"><span class="k">BTS/MRT Proximity</span><span class="v">5.5 / 10</span></div><div class="score-track"><div class="score-fill" style="width:55%;"></div></div></div>
+      <div class="score-row"><div class="score-top"><span class="k">CBD Accessibility</span><span class="v">7 / 10</span></div><div class="score-track"><div class="score-fill" style="width:70%;"></div></div></div>
+      <div class="score-row"><div class="score-top"><span class="k">Luxury Brand Density</span><span class="v">9.5 / 10</span></div><div class="score-track"><div class="score-fill" style="width:95%;"></div></div></div>
+      <div class="score-row"><div class="score-top"><span class="k">Infrastructure Maturity</span><span class="v">8.5 / 10</span></div><div class="score-track"><div class="score-fill" style="width:85%;"></div></div></div>
+      <div class="score-row"><div class="score-top"><span class="k">Lifestyle Ecosystem</span><span class="v">9 / 10</span></div><div class="score-track"><div class="score-fill" style="width:90%;"></div></div></div>
+      <div class="score-row"><div class="score-top"><span class="k">Future Growth Potential</span><span class="v">8 / 10</span></div><div class="score-track"><div class="score-fill" style="width:80%;"></div></div></div>
+    </div>
+    <div>
+      <div class="callout callout-gold">
+        <div class="callout-title">Developer Demand Thesis</div>
+        <div class="callout-body">Thonglor commands a persistent luxury premium because scarcity is structural: there are very few remaining 4-rai freehold assemblages with full-width main-road frontage left in the district. Sansiri has anchored the immediate enclave with two flagship towers (The Monument, Khun by Yoo); a third major freehold site of this scale, at a discount to both comparable transactions and residual value, is the kind of asset major listed developers actively compete for rather than wait for.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · DEAL BOX -->
+<section id="s12">
+  <div class="deal-box">
+    <div class="section-label" style="text-align:center;">12 · Deal Box</div>
+    <div class="deal-headline">"A 1,600 Wah² / 4 Rai Brown ย.9 site in Thonglor — FAR 8:1 unlocking 51,200 m² of developable GFA — one of the last full-frontage freehold landholdings of this scale on Sukhumvit 55, offered at a ~41% discount to residual development value."</div>
+    <div class="ask-price">ASKING PRICE: ฿2,560 MB</div>
+    <div class="ask-sub">฿1.6M / Wah² · ฿400,000 / m² · ≈ USD 70.1M (at ~36.5 THB/USD) · ~41% discount to residual value</div>
+    <div class="deal-div"></div>
+    <div class="thesis">
+      <p><b>The Land.</b> A rectangular 4-rai (1,600 Wah², 6,400 m²) Chanote freehold parcel with 63 metres of direct frontage on Sukhumvit 55 and 102 metres of depth, plus secondary access via Thong Lor Soi 29. Vacant, cleared, and development-ready with no encumbrances or title complications.</p>
+      <p><b>The Opportunity.</b> Zoned Brown ย.9 at FAR 8:1, the site supports up to 51,200 m² of GFA — best expressed as a ~35–40 floor luxury condominium tower. Modelled against a blended ASP of ฿280,000/m², the project generates an estimated ฿11.2 billion GDV and ฿4.1 billion in net development profit, a margin materially above standard developer targets because the land itself is priced below its residual value.</p>
+      <p><b>The Market.</b> Thonglor is one of the few Bangkok submarkets where 2026 demand is holding up against a citywide backdrop of price competition and oversupply — anchored by Sansiri's The Monument and Khun by Yoo directly adjacent, sustained 10%+ annual land appreciation, and structurally constrained new supply of comparable freehold sites.</p>
+    </div>
+    <div class="pill-row">
+      <span class="pill">Chanote Freehold</span>
+      <span class="pill">1,600 Wah²</span>
+      <span class="pill">Thonglor CBD-Adjacent</span>
+      <span class="pill">FAR 8:1</span>
+      <span class="pill">51,200 m² GFA</span>
+      <span class="pill">Below Residual Value</span>
+      <span class="pill">BTS Thong Lo ~2.0km</span>
+      <span class="pill">GDV ฿11.2B</span>
+      <span class="pill">IRR ~24%</span>
+      <span class="pill">MOIC 1.58×</span>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- 13 · CONTACT FOOTER -->
+<div class="contact-strip">
+  <div class="wrap contact-grid">
+    <div>
       <div class="contact-name">Monthon Mahakijdumrongnukul</div>
-      <div class="contact-title">Joe Collection · Premium Real Estate Advisory · Bangkok</div>
-      <div class="contact-info">
-        <div class="contact-item">
-          <strong>Mobile</strong>
-          +66 80-657-8387
-        </div>
-        <div class="contact-item">
-          <strong>Email</strong>
-          joecollection.m@gmail.com
-        </div>
-        <div class="contact-item">
-          <strong>Property</strong>
-          Land 4 Rai · Sukhumvit 55 Thong Lo
-        </div>
-        <div class="contact-item">
-          <strong>Asking Price</strong>
-          <span style="color:#7EE0A0;font-weight:600;font-size:15px;">฿ 2,560,000,000</span>
-        </div>
-      </div>
+      <div class="contact-role">Deal Maker &amp; Senior Advisor</div>
     </div>
-  </section>
+    <div>
+      <div class="contact-line">+66 80-657-8387</div>
+      <div class="contact-line">joecollection.m@gmail.com</div>
+      <a class="cta-btn" href="https://joecollection.github.io/landsukhumvit55-4rai/" target="_blank">Full Land Analysis →</a>
+      <a class="cta-btn" href="https://joecollection.github.io/joecollection-portfolio/" target="_blank">Premium Asset Portfolio →</a>
+    </div>
+    <div class="wordmark">JOE COLLECTION</div>
+  </div>
+</div>
 
-</main>
-
-<footer>
-  <span>Joe Collection · Confidential Investment Memorandum · 2026</span>
-  <br class="mobile-break" style="display:none;">
-  <span>Prepared exclusively for qualified investors. All projections are estimates subject to independent due diligence and verification.</span>
-</footer>
-
-<script>
-  // โค้ดเสริมสำหรับซ่อน/แสดงเบรกแถวที่ฟุตเตอร์ในมือถือเพื่อความสวยงาม
-  if(window.innerWidth <= 768) {
-    var mobBreak = document.querySelector('.mobile-break');
-    if(mobBreak) mobBreak.style.display = 'block';
-  }
-</script>
+<!-- 14 · DISCLAIMER -->
+<div class="disclaimer">
+  This document is confidential and prepared exclusively for the intended recipient. It is not an offer or solicitation and does not constitute investment, legal, tax or financial advice. Data sources referenced include Colliers Thailand, CBRE Thailand, JLL Thailand, Nation Thailand, Bangkok Post Property, the Thailand Treasury Department land appraisal database, and public listing platforms (FazWaz, PropertyHub, JST Realty, DDproperty). GDV, IRR, MOIC and all development projections are indicative estimates only, based on current market data and standard Bangkok build-cost benchmarks — they are not a substitute for an independent feasibility study, quantity surveyor's estimate, or licensed appraisal. FAR, OSR and zoning are subject to Bangkok Metropolitan Administration City Plan revision and are not guaranteed; EIA approval and building permits are not guaranteed and remain subject to regulatory review. Forward-looking statements involve risks and uncertainties and actual results may differ materially. Data as at July 2026. THB/USD reference rate ≈ 36.5.
+</div>
 
 </body>
 </html>
